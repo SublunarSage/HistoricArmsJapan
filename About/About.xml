@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Historic Arms: Japan</name>
+    <author>Aura</author>
+    <packageId>Aura.HistoricArmsJapan</packageId>
+    <supportedVersions>
+        <li>1.3</li>
+    </supportedVersions>
+    <description>
+Historic Arms seeks to implement a variety of different weaponry across all eras from countries across the world. 
+
+Historic Arms: Japan is the first in the series of Historic Arms mods, providing a multitude of various weapons from Japan, spread out into 3 research projects per tech era.
+    </description>
+</ModMetaData>

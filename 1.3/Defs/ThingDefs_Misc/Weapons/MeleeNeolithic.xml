@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+
+
+  <!-- Tonfa -->
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>HAJ_Tonfa</defName>
+    <label>tonfa</label>
+    <description>An ancient weapon used within the Okinawan Kobudo martial arts, Tonfas are capable of blocking incoming melee attacks, as well as deal quick, powerful strikes.</description>
+    <graphicData>
+      <texPath>Things/WeaponMelee/Tonfa</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <costStuffCount>60</costStuffCount>
+    <statBases>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>1.2</Mass>
+    </statBases>
+    <equippedStatOffsets> <!-- Need to use dodge as a pseudo "block" -->
+      <MeleeDodgeChance>3</MeleeDodgeChance>
+    </equippedStatOffsets>
+    <equippedAngleOffset>-45</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>pommel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>forward thrust</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>backward thrust</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>19</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+      <li>
+        <label>slap</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+
+</Defs>

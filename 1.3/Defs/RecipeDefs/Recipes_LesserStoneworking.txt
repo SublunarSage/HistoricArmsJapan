@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<!-- Rudimentary Neolithic Stonecarving for Weapons and Tools via chunks -->
+<Defs>
+  <RecipeDef Name="HAJ_MakeChunkyWeapon" Abstract="True">
+    <workSkill>Crafting</workSkill>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <allowMixingIngredients>False</allowMixingIngredients>
+    <skillRequirements>
+      <Crafting>3</Crafting>
+    </skillRequirements>
+    <researchPrerequisite>HAJ_AdvancedWoodworking</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef ParentName="HAJ_MakeChunkyWeapon">
+    <defName>HAJ_MakeLesserKanabo</defName>
+    <label>make kanabo</label>
+    <description>Construct a lesser kanabo through stone chunks rather than carved stone.</description>
+    <jobString>Constructing kanabo.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>StoneChunks</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Woody</li>
+          </categories>
+        </filter>
+        <count>45</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>StoneChunks</li>
+        <li>Woody</li>
+      </categories>
+    </fixedIngredientFilter>
+    
+  </RecipeDef>
+</Defs>

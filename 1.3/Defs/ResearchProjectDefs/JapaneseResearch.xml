@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef>
+		<defName>HAJ_BasicWoodworking</defName>
+		<label>Basic Japanese Woodworking</label>
+		<description>Understand the basics of Japanese woodworking and craftsmanship in order to craft basic wood tools and weapons.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>00.00</researchViewX> <!--Increase by 1.00 -->
+		<researchViewY>00.00</researchViewY> <!--Increase by 0.70 -->
+		<tab>HistoricArms</tab>
+	</ResearchProjectDef>
+    <ResearchProjectDef>
+		<defName>HAJ_AdvancedWoodworking</defName>
+		<label>Advanced Japanese Woodworking</label>
+		<description>Further understanding of Japanese woodworking, with knowledge on how to bend wood into more complex shapes, as well as the utilization of stone in tools and weapons to increase their effectiveness.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>01.00</researchViewX> 
+		<researchViewY>00.00</researchViewY> 
+		<tab>HistoricArms</tab>
+        <prerequisites>
+            <li>HAJ_BasicWoodworking</li>
+        </prerequisites>
+	</ResearchProjectDef>
+    <ResearchProjectDef>
+		<defName>HAJ_BasicMetalworking</defName>
+		<label>Basic Japanese Metalworking</label>
+		<description>Learning the basics of Japanese smithing to produce new metal tools and weapons, including utilizing metals in the construction of previous wood and stone armaments.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>02.00</researchViewX> 
+		<researchViewY>00.00</researchViewY> 
+		<tab>HistoricArms</tab>
+        <prerequisites>
+            <li>HAJ_AdvancedWoodworking</li>
+            <li>Smithing</li>
+        </prerequisites>
+	</ResearchProjectDef>
+    <ResearchProjectDef>
+		<defName>HAJ_AdvancedMetalworking</defName>
+		<label>Advanced Japanese Metalworking</label>
+		<description>The application of advanced Japanese smithing to produce incredibly effective armaments. Additionally, the precursor knowledge to Japanese blackpowder weaponry is also made available.</description>
+		<baseCost>750</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>03.00</researchViewX> 
+		<researchViewY>00.00</researchViewY> 
+		<tab>HistoricArms</tab>
+        <prerequisites>
+            <li>HAJ_BasicMetalworking</li>
+        </prerequisites>
+	</ResearchProjectDef>
+</Defs>

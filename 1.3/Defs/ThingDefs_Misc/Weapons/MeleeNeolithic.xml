@@ -4,17 +4,17 @@
 
 
 
-  <!-- Tonfa -->
-  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+  <!-- Wooden Tonfa -->
+  <ThingDef Name="HAJ_Tonfa" ParentName="BaseMeleeWeapon_Blunt_Quality">
     <defName>HAJ_Tonfa</defName>
     <label>tonfa</label>
     <description>An ancient weapon used within the Okinawan Kobudo martial arts, Tonfas are capable of blocking incoming melee attacks, as well as deal quick, powerful strikes.</description>
     <graphicData>
-      <texPath>Things/WeaponMelee/Tonfa</texPath>
+      <texPath>Things/Item/Equipment/WeaponMelee/Tonfa</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <techLevel>Neolithic</techLevel>
-    <costStuffCount>60</costStuffCount>
+    <costStuffCount>40</costStuffCount>
     <statBases>
       <WorkToMake>9000</WorkToMake>
       <Mass>1.2</Mass>
@@ -24,41 +24,213 @@
     </equippedStatOffsets>
     <equippedAngleOffset>-45</equippedAngleOffset>
     <stuffCategories>
-      <li>Metallic</li>
       <li>Woody</li>
     </stuffCategories>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisites>
+        <li>HAJ_BasicWoodworking</li>
+      </researchPrerequisites>
+    </recipeMaker>
     <tools>
       <li>
-        <label>pommel</label>
+        <label>tsukagashira (pommel)</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>10</power>
+        <power>12</power>
         <cooldownTime>2</cooldownTime>
       </li>
       <li>
-        <label>forward thrust</label>
+        <label>zen atama (front end)</label>
         <capacities>
           <li>Poke</li>
         </capacities>
-        <power>15</power>
-        <cooldownTime>2</cooldownTime>
+        <power>5</power>
+        <cooldownTime>1</cooldownTime>
       </li>
       <li>
-        <label>backward thrust</label>
+        <label>ushiro atama (back end)</label>
         <capacities>
           <li>Poke</li>
         </capacities>
-        <power>19</power>
-        <cooldownTime>2.6</cooldownTime>
+        <power>7</power>
+        <cooldownTime>1.3</cooldownTime>
       </li>
       <li>
-        <label>slap</label>
+        <label>monouchi (shaft)</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- Wood Bo Staff -->
+
+
+  <!-- Lesser Kanabō -->
+  <ThingDef Name="HAJ_Kanabo" ParentName="BaseMeleeWeapon_Blunt">
+    <defName>HAJ_Kanabo</defName>
+    <label>Kanabō</label>
+    <description>An extremely heavy two-handed war club that was used by samurai in feudal Japan. The Kanabō is typically made out of wood with metal spikes or stubs. The Kanabō's heavy mass and round stubs make it an excellent anti-armor weapon.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/Kanabo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <costStuffCount>105</costStuffCount>
+    <costList>
+      <WoodLog>45</WoodLog>
+    </costList>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>5</Mass>
+    </statBases>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>HAJ_AdvancedWoodworking</researchPrerequisite>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>tsukagashira (pommel)</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>itadaki (top)</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
         <power>20</power>
-        <cooldownTime>2.6</cooldownTime>
+        <cooldownTime>3</cooldownTime>
+      </li>
+      <li>
+        <label>monouchi (shaft)</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>34</power>
+        <cooldownTime>4</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- Improved Kanabō -->
+  <ThingDef ParentName="HAJ_Kanabo">
+    <defName>HAJ_Kanabo_I</defName>
+    <stuffCategories Inherit="False">
+      <li>Metallic</li>
+    </stuffCategories>
+    <techLevel>Medieval</techLevel>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>HAJ_BasicMetalworking</li>
+      </researchPrerequisites>
+      <recipeUsers Inherit="False">
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Improved Tonfa -->
+  <ThingDef ParentName="HAJ_Tonfa">
+    <defName>HAJ_Tonfa_I</defName>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <techLevel>Medieval</techLevel>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>HAJ_BasicMetalworking</li>
+      </researchPrerequisites>
+      <recipeUsers Inherit="False">
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>HAJ_Katana</defName>
+    <label>katana</label>
+    <description>The Katana is one of the most easily recognizable weapons by Japanese Samurai, featuring a curved, single-edged blade, with a circular grip accomodating two handed use. Each blade requires an extreme attention to detail, with careful folding and quenching to produce a strong, sharp blade. This process is not very feasible within the rim worlds, but a fairly close approximation is achieved.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/Katana</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <costStuffCount>60</costStuffCount>
+    <statBases>
+      <WorkToMake>16000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>HAJ_AdvancedMetalworking</li>
+      </researchPrerequisites>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>tsuka (handle)</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>ha (edge)</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>1.75</cooldownTime>
+      </li>
+      <li>
+        <label>mune (back)</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>kissaki (point)</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2.3</cooldownTime>
       </li>
     </tools>
   </ThingDef>
